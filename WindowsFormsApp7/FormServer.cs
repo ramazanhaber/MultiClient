@@ -58,6 +58,12 @@ namespace WindowsFormsApp7
             }));
         }
 
-       
+        private void btnMesajGonder_Click(object sender, EventArgs e)
+        {
+            string gidicekMesaj=txtGidicekMesaj.Text;
+            string gidicekIpPort=txtGidicekIpPort.Text;
+            server.Send(gidicekIpPort, gidicekMesaj);
+
+        }
     }
 }
