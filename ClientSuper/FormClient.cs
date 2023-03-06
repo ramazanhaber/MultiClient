@@ -32,7 +32,12 @@ namespace ClientSuper
 
          void DataReceived(object sender, DataReceivedEventArgs e)
         {
-            Console.WriteLine($"[{e.IpPort}] {Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count)} **");
+            string text = $"[{e.IpPort}] {Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count)} **";
+            Console.WriteLine(text);
+            this.Invoke(new MethodInvoker(() =>
+            {
+                txtCevap.Text = txtCevap.Text + System.Environment.NewLine + text;
+            }));
         }
 
         private void button1_Click(object sender, EventArgs e)
