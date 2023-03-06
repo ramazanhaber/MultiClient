@@ -2,6 +2,7 @@
 using System;
 using System.Text;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ClientSuper
 {
@@ -22,12 +23,24 @@ namespace ClientSuper
 
          void Connected(object sender, ConnectionEventArgs e)
         {
-            Console.WriteLine($"*** Server {e.IpPort} connected");
+            string text = $"*** Server {e.IpPort} connected";
+
+            Console.WriteLine(text);
+            this.Invoke(new MethodInvoker(() =>
+            {
+                txtCevap.Text = txtCevap.Text + System.Environment.NewLine + text;
+            }));
         }
 
          void Disconnected(object sender, ConnectionEventArgs e)
         {
-            Console.WriteLine($"*** Server {e.IpPort} disconnected");
+            string text = $"*** Server {e.IpPort} disconnected";
+
+            Console.WriteLine(text);
+            this.Invoke(new MethodInvoker(() =>
+            {
+                txtCevap.Text = txtCevap.Text + System.Environment.NewLine + text;
+            }));
         }
 
          void DataReceived(object sender, DataReceivedEventArgs e)
