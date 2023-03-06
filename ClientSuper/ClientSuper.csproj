@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="mscorlib.resources, Version=4.0.0.0, Culture=tr, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\cc\mscorlib.resources.dll</HintPath>
+    </Reference>
     <Reference Include="SuperSimpleTcp, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SuperSimpleTcp.3.0.0.2\lib\net461\SuperSimpleTcp.dll</HintPath>
     </Reference>

@@ -39,6 +39,8 @@ namespace WindowsFormsApp7
             this.Invoke(new MethodInvoker(() =>
             {
                 textBox1.Text = textBox1.Text + "\n" + mesaj;
+
+                server.Send(e.IpPort, "serverdan cevap döndü Başarılı");
             }));
         }
 

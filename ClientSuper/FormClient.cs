@@ -32,7 +32,7 @@ namespace ClientSuper
 
          void DataReceived(object sender, DataReceivedEventArgs e)
         {
-            Console.WriteLine($"[{e.IpPort}] {Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count)}");
+            Console.WriteLine($"[{e.IpPort}] {Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count)} **");
         }
 
         private void button1_Click(object sender, EventArgs e)
